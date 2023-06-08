@@ -27,9 +27,12 @@
     "mdast-util-to-string": "^3.1.0",
     "mdx-annotations": "^0.1.1",
     "next": "^13.4.4",
+    "postcss": "^8.4.24",
     "postcss-focus-visible": "^8.0.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "postcss-import": "^15.1.0",
+    "preact": "^10.15.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "recma-nextjs-static-props": "^1.0.0",
     "rehype-mdx-title": "^2.0.0",
     "remark-gfm": "^3.0.1",
@@ -39,9 +42,11 @@
     "zustand": "^4.3.8"
   },
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.0.2",
     "eslint": "^8.42.0",
     "eslint-config-next": "^13.4.4",
     "prettier": "^2.8.7",
+    "prettier-plugin-pkg": "^0.17.1",
     "prettier-plugin-tailwindcss": "^0.3.0"
   }
 }
