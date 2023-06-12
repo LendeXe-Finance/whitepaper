@@ -2,20 +2,20 @@
 # yarn lockfile v1
 
 
-"@algolia/autocomplete-core@^1.7.3":
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-core/-/autocomplete-core-1.9.2.tgz#1c9ffcfac7fc4733fe97356247b25d9d7a83538c"
-  integrity sha512-hkG80c9kx9ClVAEcUJbTd2ziVC713x9Bji9Ty4XJfKXlxlsx3iXsoNhAwfeR4ulzIUg7OE5gez0UU1zVDdG7kg==
+"@algolia/autocomplete-core@^1.9.3":
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-core/-/autocomplete-core-1.9.3.tgz#1d56482a768c33aae0868c8533049e02e8961be7"
+  integrity sha512-009HdfugtGCdC4JdXUbVJClA0q0zh24yyePn+KUGk3rP7j8FEe/m5Yo/z65gn6nP/cM39PxpzqKrL7A6fP6PPw==
   dependencies:
-    "@algolia/autocomplete-plugin-algolia-insights" "1.9.2"
-    "@algolia/autocomplete-shared" "1.9.2"
+    "@algolia/autocomplete-plugin-algolia-insights" "1.9.3"
+    "@algolia/autocomplete-shared" "1.9.3"
 
-"@algolia/autocomplete-plugin-algolia-insights@1.9.2":
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-plugin-algolia-insights/-/autocomplete-plugin-algolia-insights-1.9.2.tgz#b4672d5662acc2d0a0547d14dfbdcc70c17625de"
-  integrity sha512-2LVsf4W66hVHQ3Ua/8k15oPlxjELCztbAkQm/hP42Sw+GLkHAdY1vaVRYziaWq64+Oljfg6FKkZHCdgXH+CGIA==
+"@algolia/autocomplete-plugin-algolia-insights@1.9.3":
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-plugin-algolia-insights/-/autocomplete-plugin-algolia-insights-1.9.3.tgz#9b7f8641052c8ead6d66c1623d444cbe19dde587"
+  integrity sha512-a/yTUkcO/Vyy+JffmAnTWbr4/90cLzw+CC3bRbhnULr/EM0fGNvM13oQQ14f2moLMcVDyAx/leczLlAOovhSZg==
   dependencies:
-    "@algolia/autocomplete-shared" "1.9.2"
+    "@algolia/autocomplete-shared" "1.9.3"
 
 "@algolia/autocomplete-preset-algolia@^1.9.2":
   version "1.9.2"
@@ -28,6 +28,11 @@
   version "1.9.2"
   resolved "https://registry.yarnpkg.com/@algolia/autocomplete-shared/-/autocomplete-shared-1.9.2.tgz#b5b909377439c45774cfb91947ad8e6ebd4652c1"
   integrity sha512-XxX6YDn+7LG+SmdpXEOnj7fc3TjiVpQ0CbGhjLwrd2tYr6LVY2D4Iiu/iuYJ4shvVDWWnpwArSk0uIWC/8OPUA==
+
+"@algolia/autocomplete-shared@1.9.3":
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-shared/-/autocomplete-shared-1.9.3.tgz#2e22e830d36f0a9cf2c0ccd3c7f6d59435b77dfa"
+  integrity sha512-Wnm9E4Ye6Rl6sTTqjoymD+l8DjSTHsHboVRYrKgEt8Q7UHm9nYbqhN/i0fhUYA3OAEH7WA8x3jfpnmJm3rKvaQ==
 
 "@algolia/cache-browser-local-storage@4.17.1":
   version "4.17.1"
@@ -615,18 +620,6 @@
   integrity sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==
   dependencies:
     tslib "^2.4.0"
-
-"@tailwindcss/aspect-ratio@^0.4.2":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/aspect-ratio/-/aspect-ratio-0.4.2.tgz#9ffd52fee8e3c8b20623ff0dcb29e5c21fb0a9ba"
-  integrity sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ==
-
-"@tailwindcss/forms@^0.5.3":
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.5.3.tgz#e4d7989686cbcaf416c53f1523df5225332a86e7"
-  integrity sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==
-  dependencies:
-    mini-svg-data-uri "^1.2.3"
 
 "@tailwindcss/typography@^0.5.8":
   version "0.5.9"
@@ -3103,11 +3096,6 @@ mimic-fn@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-4.0.0.tgz#60a90550d5cb0b239cca65d893b1a53b29871ecc"
   integrity sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==
-
-mini-svg-data-uri@^1.2.3:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz#8ab0aabcdf8c29ad5693ca595af19dd2ead09939"
-  integrity sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==
 
 minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
