@@ -7,7 +7,7 @@ import {
   useState,
 } from 'react'
 import { Tab } from '@headlessui/react'
-import clsx from 'clsx'
+import cn from 'clsx'
 import { create } from 'zustand'
 
 import { Tag } from '@/components/Tag'
@@ -59,10 +59,10 @@ function CopyButton({ code }) {
   return (
     <button
       type="button"
-      className={clsx(
+      className={cn(
         'group/button absolute right-4 top-3.5 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100',
         copied
-          ? 'bg-emerald-400/10 ring-1 ring-inset ring-emerald-400/20'
+          ? 'bg-teal-400/10 ring-1 ring-inset ring-teal-400/20'
           : 'bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5'
       )}
       onClick={() => {
@@ -73,7 +73,7 @@ function CopyButton({ code }) {
     >
       <span
         aria-hidden={copied}
-        className={clsx(
+        className={cn(
           'pointer-events-none flex items-center gap-0.5 text-zinc-400 transition duration-300',
           copied && '-translate-y-1.5 opacity-0'
         )}
@@ -83,8 +83,8 @@ function CopyButton({ code }) {
       </span>
       <span
         aria-hidden={!copied}
-        className={clsx(
-          'pointer-events-none absolute inset-0 flex items-center justify-center text-emerald-400 transition duration-300',
+        className={cn(
+          'pointer-events-none absolute inset-0 flex items-center justify-center text-teal-400 transition duration-300',
           !copied && 'translate-y-1.5 opacity-0'
         )}
       >
@@ -151,10 +151,10 @@ function CodeGroupHeader({ title, children, selectedIndex }) {
         <Tab.List className="-mb-px flex gap-4 text-xs font-medium">
           {Children.map(children, (child, childIndex) => (
             <Tab
-              className={clsx(
+              className={cn(
                 'border-b py-3 transition focus:[&:not(:focus-visible)]:outline-none',
                 childIndex === selectedIndex
-                  ? 'border-emerald-500 text-emerald-400'
+                  ? 'border-teal-500 text-teal-400'
                   : 'border-transparent text-zinc-400 hover:text-zinc-300'
               )}
             >
