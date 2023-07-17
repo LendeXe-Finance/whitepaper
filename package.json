@@ -30,7 +30,7 @@
     "postcss": "^8.4.26",
     "postcss-focus-visible": "^9.0.0",
     "postcss-import": "^15.1.0",
-    "preact": "^10.15.1",
+    "preact": "^10.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "recma-nextjs-static-props": "^1.0.0",
