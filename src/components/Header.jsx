@@ -1,4 +1,4 @@
-import { forwardRef } from 'react'
+import { forwardRef } from 'preact/compat'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { motion, useScroll, useTransform } from 'framer-motion'
