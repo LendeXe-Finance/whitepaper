@@ -1,19 +1,12 @@
-import { mdxAnnotations } from 'mdx-annotations'
-import recmaNextjsStaticProps from 'recma-nextjs-static-props'
+import { mdxAnnotations } from 'mdx-annotations';
+import recmaNextjsStaticProps from 'recma-nextjs-static-props';
 
-function recmaRemoveNamedExports() {
-  return (tree) => {
-    tree.body = tree.body.map((node) => {
-      if (node.type === 'ExportNamedDeclaration') {
-        return node.declaration
-      }
-      return node
-    })
-  }
-}
+const recmaRemoveNamedExports = () => (tree) => {
+  tree.body = tree.body.filter((node) => node.type !== 'ExportNamedDeclaration');
+};
 
 export const recmaPlugins = [
   mdxAnnotations.recma,
-  recmaRemoveNamedExports,
+  recmaRemoveNamedExports(),
   recmaNextjsStaticProps,
-]
+];
