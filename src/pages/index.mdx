@@ -1,39 +1,221 @@
-import { Guides } from '@/components/Guides'
-import { Resources } from '@/components/Resources'
 import { HeroPattern } from '@/components/HeroPattern'
 
 export const description =
-  'Learn everything there is to know about the Protocol API and integrate Protocol into your product.'
+  'Whitepaper description'
 
-export const sections = [
-  { title: 'Guides', id: 'guides' },
-  { title: 'Resources', id: 'resources' },
-]
+[//]: # (export const sections = [)
+
+[//]: # (  { title: 'Section1', id: 'guides' },)
+
+[//]: # (  { title: 'Section2', id: 'resources' },)
+
+[//]: # (])
 
 <HeroPattern />
 
-# API Documentation
+# LendeXe Whitepaper
 
-Use the Protocol API to access contacts, conversations, group messages, and more and seamlessly integrate your product into the workflows of dozens of devoted Protocol users. {{ className: 'lead' }}
+_Version 1.0.2 | Oct 2023_
 
-<div className="not-prose mb-16 mt-6 flex gap-3">
-  <Button href="/quickstart" arrow="right" children="Quickstart" />
-  <Button href="/sdks" variant="outline" children="Explore SDKs" />
-</div>
+## Introduction
 
-## Getting started {{ anchor: false }}
+In the pulsating landscape of digital finance, we face a paradox – on the one hand, blockchains offer immense opportunities, on the other hand, liquidity remains trapped in their respective silos. This fragmentation of liquidity makes it difficult for users to experience the full range of DeFi innovations. Here, LendeXe enters the scene, a protocol dedicated to bridging these liquidity silos to enable a seamless, safe, and profitable DeFi experience. Through the integration of Chainlink’s Cross-Chain Interoperability Protocol (CCIP), LendeXe aims to usher in an era of secure and flowing liquidity. Our vision is to create an ecosystem where the safety of assets and the protocol is ensured, while users can safely utilize the benefits of the DeFi landscape. With LendeXe, a journey begins into a future where the financial boundaries between different blockchains blur, and a seamless, user-centered DeFi experience is enabled, with LendeXe acting as a robust infrastructure for lending, allowing everyone to move safely in the DeFi world while simultaneously preserving the interests and liquidity integrity of the involved blockchains.
 
-To get started, create a new application in your [developer settings](#), then read about how to make requests for the resources you need to access using our HTTP APIs or dedicated client SDKs. When your integration is ready to go live, publish it to our [integrations directory](#) to reach the Protocol community. {{ className: 'lead' }}
+At the heart of the LendeXe platform is the XSD-Equilibrator Hub, an expression of our vision to create a world where liquidity can flow freely, regardless of the boundaries of individual blockchains. The Equilibrator Hub aims to become a central hub for stablecoins, providing users protection and promoting development towards the FX market. Additionally, assets within the hub are used for yield farming to support and incentivize the COLLABORATIVE Liquidation Hub, creating an additional level of security and reward for users.
 
-<div className="not-prose">
-  <Button
-    href="/sdks"
-    variant="text"
-    arrow="right"
-    children="Get your API key"
-  />
-</div>
+Another milestone of our platform is the newly developed Liquidation Hub, enabling cross-chain liquidation. This collective hub is designed to secure every upcoming liquidation with the provided liquidity, making LendeXe a robust partner in turbulent market times.
 
-<Guides />
+Our unique tokenomic design is aimed at minting XSD tokens through fee collection and providing them as Undercollateralized LendeXe Loan. In this innovative lending model, users can provide 100% of the collateral and receive a loan of up to 150%, financed by the protocol itself. This model is a direct result of our DAO structure, where no fees flow to third parties, but instead are fed back into the ecosystem to promote further growth and user engagement.
 
-<Resources />
+With a User-Loyalty-Program that encourages community engagement, and the unlimited scalability enabled by the XSD-Equilibrator Hub, LendeXe positions itself at the forefront of the movement to overcome liquidity fragmentation. We aspire to a future where the DeFi world is no longer separated by silos, but by a network of connected liquidity pools enabling a seamless, safe, and user-driven experience.
+
+LendeXe is not only an answer to the current stagnation in the DeFi sector but also a preparation for the upcoming fusion of crypto-based and traditional financial systems. With our robust, scalable, and interoperable platform, we set the stage for seamless integration and cooperation between these hitherto separated financial worlds, as the traditional financial landscape continues to move towards DeFi.
+
+
+[//]: # (<YourComponentToShowGraphsOrImages />)
+
+### The XSD Stablecoin
+
+XSD is a fully on-chain decentralized Collateralized Debt Position (CDP) system, hard-pegged to the US Dollar, mintable by depositing Tether (USDT), USD Coin (USDC) or MakerDAO (DAI) via the XSD Equilibrator Hub. Depending on market forces, XSD can be over-collateralized by 100 to 233% through a basket of tokens.
+
+
+[//]: # (```jsx)
+
+[//]: # (<AnotherComponent for="visualization" />)
+
+## Store of Value
+
+XSD, backed by three assets and hard-pegged to the US Dollar, serves as a store of value, preventing depreciation over time. If one of the stablecoin collaterals declines, the XSD Equilibrator Hub’s automated swap mechanism, designed for XSD Collateral, replaces the fallen one with others. There are no technical limitations on the number of stablecoins; post XSD launch, more stablecoins will be added to the basket to cater to every user.
+
+
+## User Protection
+
+Powered by smart contracts, user protection when minting XSD is transparent and safeguarded by the automated management and oversight mechanism of the XSD Equilibrator Hub, ensuring optimal stablecoin asset allocation through carefully devised strategies.
+
+
+## Stability Mechanism
+
+Using XSD Equilibrator Hub, everyone can mint/burn XSD by supplying/withdrawing USDT, USDC or DAI. The XSD Equilibrator Hub always considers the face value of XSD (1 XSD = 1 USD). To push the stability, 60% of LendeXe Reserve Factor will be swapped with 50% USDT, 30% USDC and 20% DAI to be poured directly into XSD Equilibrator Hub.
+
+To use the XSD Equilibrator Hub, users pay a
+
+* 0.1% minting fee when XSD=>$1 and a
+* 0.1 to 5.0% minting fee when $0.998$\<XSD\<$1, and a
+* 0.1% burning fee when XSD\<=$1.002 and a
+* 0.1 to 5.0% burning fee when $1.002\<XSD\<$1.050.
+
+If XSD\<$0.998, minting stops and if XSD\>$1.050 burning stops. These fees will be used to buyback and burn LEXE.
+
+## Collaborative XSD Liquidation Hub
+
+The XSD Collaborative Liquidation Hub is the long time needed standard designed as collective liquidation hub, and the old liquidation risks are no longer the problem of the protocol and community.
+
+
+### Benefits
+
+- Shared Participation Incentives: Encouraging collective efforts to ensure asset liquidation is handled efficiently and fairly across the network.
+- Enhanced Automation & Interoperability: Seamlessly connect and interact with different blockchain protocols, automating processes and enhancing cross-chain functionalities.
+- Robust Liquidation Mechanism: A strong framework ensuring timely and fair asset liquidation, minimizing risks and ensuring market stability.
+- Simplified User Experience: User-friendly interface and processes, making participation in liquidation processes straightforward.
+- Scalable Cross-Chain Security: Expanding security measures across multiple chains, ensuring a safe and stable operational environment while boosting DeFi adoption.
+
+Incentivized with Liquidation Fees, Liquidity Mining and boosted rewards.
+
+<img src="/lq-ilustration.png" alt="How liquidation works" />
+
+## Lending and Borrowing
+
+### General
+
+LendeXe is a liquidity ecosystem and so far three different types of liquidity streams have been designed for its users. These three types are Dynamic Supplying/Borrowing (Lending) in form of preferred collateral and loan, Undercollateralized LendeXe Loan (ULL) in form of LEXE as collateral and XSD as debt and Interest-Free Loan (IFL) in form of BTC, ETH and WETH as collateral and LXD as debt.
+
+
+### Dynamic Supplying/Borrowing (Lending) Supplying cryptocurrencies in Lending
+
+This service of LendeXe contains several pools for different cryptocurrencies. Users can deposit their preferred assets into these pools to have access to continuous passive supplying interest, which is dynamic and based on a pre-designed interest rate algorithm that functions correspondingly to the market conditions. There is no time limit and suppliers can always demand withdrawal. Supplied balances are represented by synthetic balance-tokens called xToken in suppliers wallets. As time goes on and users xTokens accrue interest, their balance will remain constant but their exchange rate increases. When a user wants to redeem their xToken and withdraw their initial supplied token, they would withdraw an increased amount which has their initial tokens and accrued interest together.
+
+Example. A user opens a position with a $10k BTC deposit and receives 10k xBTC instead. After a year, BTC has faced a 10% average supply interest rate but the user still has the initial 10k xBTC. As xBTC accrued interest over the year, the exchange rate between BTC and xBTC has changed and if the user decides to withdraw their BTC by redeeming 10k xBTC, they will receive $11k BTC.
+
+<img src="/lendexe fluid liq.gif" alt="LendeXe Fluid Liquidity" />
+
+### Borrowing cryptocurrencies via Lending
+
+After supplying, users can use their xTokens as collateral to borrow assets from the pools Each asset has its own liquidation threshold which determines its maximum borrowing power.
+
+Borrowing_Power = Collateral_Value x Collateral_Liquidation_Threshold
+
+Loans have no maturity date, no monthly payment obligation, and their interest rates are calculated algorithmically using market forces.
+
+Example: A user opens a position with a $10k BTC deposit and receives 10k xBTC instead. To use BTC as collateral to borrow ETH, they simply lock their 10k xBTC and withdraw up to $7k ETH (BTC borrowing power is 70%). After a year, BTC has faced a 10% average supply interest rate and ETH has faced a 12% average borrowing interest rate. If the user decides to withdraw their BTC, they should repay $7.84k ETH (= $7k ETH + 12% interest) to free their 10k xBTC and then redeem their 10k xBTC to withdraw $11k BTC. These numbers are apart from LEXE reward for borrowers.
+
+
+### Interest Rates
+
+LendeXe protocol’s interest rate model makes sure that each market is functioning in an equilibrium between lenders and borrowers. The rates will be calculated algorithmically based on each pool’s Utilization Rate and the slopes are different for different markets.
+
+Utilization_Rate = Total_Borrowed / (Total_Supplied + Total_Borrowed)
+
+The higher the Utilization Rate, the higher the rates for lenders and borrowers. Using a jump-rate model, the slopes of the interest rates increase dramatically above the optimum utilization point, which prevents facing lack of liquidity in the pools. Interests are in the same tokens that users are supplying or borrowing.
+
+### Reserve Factor
+80% of the borrowers repaid interest will go to suppliers as their passive reward of supplying, the rest will go to an address called Reserve Factor as the protocol’s revenue.
+
+### Liquidation
+The LendeXe XSD Collaborative Liquidation Pool – Empowering Community Participation
+
+One of the standout features within the LendeXe DeFi Lending ecosystem is the innovative LendeXe XSD Collective Liquidation Pool. This pool offers users the opportunity to actively participate in the liquidation process, contributing to the stability and security of the platform.
+
+Traditional liquidation models, like the auction-based approach used by Compound Finance, have limitations and may not fully engage the community. In contrast, LendeXe adopts a more community-centric approach with its XSD Pool, where users can supply their XSD Stablecoin to support the liquidation process and at the samevincrease the security of the infrastructure.
+
+### How it works:
+
+- User Contribution: Users have the option to supply their XSD Stablecoin to the XSD Pool specifically designed for liquidations. By contributing to the pool, users actively participate in the liquidation mechanism and play a crucial role in maintaining the integrity of the LendeXe Finance ecosystem.
+- Liquidation Process: When a borrower’s position becomes undercollateralized and triggers a liquidation event, the XSD Pool comes into action. The XSD Stablecoin supplied by the community acts as a safeguard, ensuring that the liquidation process is swift and effective.
+- Community Incentives: As a reward for their active participation, community members who contribute to the XSD Pool receive multiple benefits:
+- LEXE Liquidity Mining: Participants in the XSD Pool also become eligible for LEXE liquidity mining rewards, further incentivizing their involvement in securing the ecosystem.
+- Liquidation Incentive: Users receive a 8% liquidation incentive at the end of the liquidation process as a reward for their contribution. In total, the Liquidation Penalty is 10% of the liquidated collateral, from which 8% will go to Collaborative Liquidation Hub and 2% to Reserve Factor.
+- APY Distribution: Additionally, users in the XSD Pool receive a share of the generated Annual Percentage Yield (APY) from the yield-boost algorithm of XSD Stablecoin. This distribution ensures that participants are actively rewarded for their ongoing commitment to the platform by getting protocol driven rewards. Pool as Liquidation Incentive for the participants and 2% goes to LendeXe Reserve Factor to fuel the Ultimate Loan.
+
+### Numerical Example:
+
+- Consider an example to better understand the potential benefits of the LendeXe Liquidation Pool:
+- User A supplies 500 XSD Stablecoins to the XSD Pool for liquidations.
+- During a liquidation event of a BTC position, the XSD Pool contributes to the process, aiding in the timely and efficient liquidation of the undercollateralized position.
+- As a result of the successful liquidation, User A, who contributed 500 XSD Stablecoins, receives $540 XSD ($500 XSD equal to the initial supply plus $40 XSD as the 8% liquidation incentive).
+- User A is also eligible for LEXE liquidity mining rewards and receives a share of the generated APY from the yield-boost algorithm of XSD Stablecoin.
+- In this scenario, User A not only played an active role in maintaining the stability of the LendeXe DeFi Lending ecosystem but also earned rewards for their contribution and ongoing participation.
+- By incorporating the LendeXe Liquidation Pool, the platform fosters community engagement, promotes a more decentralized and secure lending environment, and provides users with multiple incentives to actively participate in securing the ecosystem. Through this community-driven approach, LendeXe Finance takes a significant step towards building a robust and sustainable DeFi lending platform with interoperability liquidation mechanism.
+
+<img src="lq.png" alt="Collaborative XSD Liquidation Hub" />
+
+
+## Lending Liquidation
+To ensure having enough collateral to cover the value of all outstanding loans, risky positions will face collateral liquidation. Each collateral type asset has its own liquidation threshold, which will be used to calculate the Health Factor of its positions.
+
+Health_Factor = (Collateral_Value x Collateral_Liquidation_Threshold) / Loan_Value
+
+If the Health Factor of a position drops under 1.0, half the position’s collateral will get liquidated to repay a proportion of its debt. If the Health Factor raises above 1 after the liquidation, the process stops. If not, the process repeats.
+
+The liquidation takes place in an instant action by LendeXe XSD Liquidation Hub in which 10% of the liquidated collateral will be charged as Liquidation Penalty.
+
+Example. A position with $10k BTC collateral and $7k ETH debt faces liquidation. As BTC Liquidation Threshold is 70%, this position’s Health Factor is =\<1.0 (= ($10k x 70%) / $7k) which triggers the liquidation. 50% of the collateral will get liquidated with 10% penalty, this means $5k BTC will get liquidated with $0.5k penalty to eliminate $4.5k of the debt. Now the position has $5k BTC collateral and $2.5k ETH debt. The current health factor is 1.4>1.0 (= ($5k x 70%) / $2.5k) which stops the liquidation.
+
+## Undercollateralized LendeXe Loan (ULL)
+
+Unveiling a new standard for lending, the LendeXeDAO ecosystem introduces the Undercollateralized LendeXe Loan (ULL), a groundbreaking feature that reimagines the lending landscape. By permitting users to borrow up to 1.5 times their collateral’s value, ULL challenges the conventional lending paradigm. This is made possible as LEXE token holders are benefiting from incentivization of the protocol, as LendeXe protocol collateralizes the loans with the protocol income/fees. Upon locking their LEXE tokens for 3, 6, or 12 months, users unlock a 1.5x loan in XSD, repayable within 15, 30, or 60 days, heralding a new wave of financial empowerment and innovation within the decentralized finance space. The ULL ensures a sustainable mining performance of XSD.
+
+## Undercollateralized LendeXe Loan Liquidation
+
+Undercollateralized LendeXe Loan borrowers have a 15, 30, or 60 day window to repay their debt. If the repayment window passes or their collateral’s value drops by 20%, their collateral will get liquidated on the spot.
+
+Example 1. A position with $10k LEXE, $5k xUSDT, $3k xUSDC and $2k xDAI collateral and 15k XSD debt passes its repayment window. The protocol burns $2k LEXE on spot and transfers $8k LEXE to a vault called LEXE/XSD Stability Pool. Then it transfers $5k xUSDT, $3k xUSDC and $3k xDAI to XSD Equilibrator Hub.
+
+Example 2. A position has been opened with $10k LEXE, $5k xUSDT, $3k xUSDC and $2k xDAI collateral and 15k XSD debt but it faces a 20% drop in LEXE value, so the current situation is $8k LEXE, $5k xUSDT, $3k xUSDC and $2k xDAI collateral and 15k XSD debt. The protocol burns $1.6k LEXE on spot and transfers $6.4k LEXE to a vault called LEXE/XSD Stability Pool. Then it transfers $5k xUSDT, $3k xUSDC and $2k xDAI to XSD Equilibrator Hub.
+
+## Mechanism
+40% of the Reserve Factor’s funds will be swapped with 50% USDT, 30% USDC and 20% DAI to be stored in the Undercollateralized LendeXe Loan Pool of Funds. Whenever a user locks an amount of LEXE for a chosen time period, the protocol locks an amount of stablecoins equal to the share of the locked Lexe to the total supply of LEXE multipled by LendeXe Loan Pool of Funds content. It then mints an equal amount of XSD. The loan has 0% APY (Annual Percentage Yield) but users have to pay a 1% minting fee.
+
+Example. A user opens a position by locking 10M LEXE for 3 months. The Lendexe Loan Pool of Funds contains $1M. At the end, the protocol will lock $5k xUSDT, $3k xUSDC and $2k xDAI on behalf of the user as well as $10k LEXE from the user to have $20k collateral in total and mints 15k XSD to provide liquidity for the user. ULL fees will be collected automatically in the LEXE pool and managed by LendeXeDAO
+
+<img src="ull.png" alt="Undercollateralized LendeXe Loan" />
+
+## Interest-Free Loan (IFL)
+This feature brings utility for BTC, ETH and WETH tokens on IOTA and Ethereum Networks.
+
+Users can lock their BTC, ETH or WETH in separate repositories and use them as collateral to borrow 110% collateralized loans in the form of LXD stablecoin. The loan has 0% APY and no maturity date but users have to have a minimum debt of 2,000 LXD from which a 200 LXD plus 0.5 to 5.0% will be held inside the repository as liquidation reserve and minting fee (upon liquidity amount). The fee rises linearly from 0.5% to 5.0% as LXD redemption frequency increases. If the repository faces no liquidation, the liquidation reserve will be given back to the user.
+
+Example. A person opens a position with $10k BTC collateral and demands 9k LXD liquidity. The protocol holds 200 LXD as liquidation reserve plus a 45 LXD minting fee (= 0.5% x $9k) inside the repository and charges the person’s wallet with 8,755 LXD.
+
+
+
+## Tokenomic
+
+What is $LEXE? LEXE is the native token...
+
+### LEXE Burning Mechanism
+
+LendeXe does not charge any fee...
+
+## Networks
+
+LendeXe has been developed in Solidity...
+
+
+
+<br/>
+<br/>
+<br/>
+
+###### Disclaimer
+
+_The ownership of LEXE tokens does not represent any participation in LendeXe Protocol nor any rights of payment, remuneration, profit distribution or money reward of any kind. This document has been prepared in good faith to provide a comprehensive overview of the LendeXe dApp – which includes everything related to the dApp and User Interface and Back-end and Smart Contracts and is for information purposes only._
+
+_With the development of the LendeXe platform, protocol and/or any mobile applications may be amended in the following. Please also note that LendeXe project and/or protocol itself may be redesigned or otherwise revised in future, if that would be required for any material reasons (including, but not limited to: commercial considerations, technical possibilities, or the need to ensure compliance with any (existing or future) applicable laws and regulations, or any other material reasons). LEXE tokens are not intended to constitute securities in any jurisdiction._
+
+_This document does not constitute a prospectus or offer document of any sort and is not intended to constitute an offer of securities or a solicitation for investments in securities in any jurisdiction. The contents of this document are not a financial promotion. Therefore, none of the contents of this document serves as an invitation or inducement to engage in any sort of investment activity._
+
+_U.S. Persons, as defined in Regulation S under the U.S. Securities Act of 1933, as amended (the “U.S. Securities Act”), are prohibited from accessing this document and the LendeXe website. Nothing in this document or LendeXe website shall be deemed to constitute an offer, offer to sell, or the solicitation of an offer to buy, any securities in any U.S. jurisdiction. Each person accessing this document or LendeXe website will be deemed to have understood and agreed that: (1) he is not a U.S. citizen and he is located outside of the U.S.; (2) any securities described herein have not been and will not be registered under the U.S. Securities Act or with any securities regulatory authority of any state or other jurisdiction of the United States, and may not be offered, sold or delivered within the United States or to, or for the account or benefit of, U.S. persons except pursuant to an exemption from, or in a transaction not subject to, the registration requirements of the U.S. Securities Act and applicable state securities laws._
+
+_Do not contribute any money that you can’t afford to lose in the LendeXe PROTOCOL. Make sure you read and understand this document and any TERMS AND CONDITIONS FOR PARTICIPATING IN THE LendeXe PROTOCOL (including all warnings regarding possible token value, technical, regulatory and any other risks; as well as all disclaimers contained therein), as will be published on our website www.lendexe.fi (as they may be amended from time to time)._
+
+_Should you have any questions regarding the LendeXe Project, LEXE token, the contents of this document, please, do not hesitate to contact us via info@lendexe.fi or in our Discord._

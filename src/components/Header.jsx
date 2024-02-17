@@ -58,9 +58,11 @@ export const Header = forwardRef(function Header({ className }, ref) {
             'bg-zinc-900/7.5 dark:bg-white/7.5'
         )}
       />
-      <Search />
+      {/*<Search />*/}
+      <div></div>
       <div className="flex items-center gap-5 lg:hidden">
-        <MobileNavigation />
+        {/*<MobileNavigation />*/}
+        <div></div>
         <Link href="/" aria-label="Home">
           <Logo className="h-6" />
         </Link>
@@ -68,9 +70,9 @@ export const Header = forwardRef(function Header({ className }, ref) {
       <div className="flex items-center gap-5">
         <nav className="hidden md:block">
           <ul role="list" className="flex items-center gap-8">
-            <TopLevelNavItem href="/">API</TopLevelNavItem>
-            <TopLevelNavItem href="#">Documentation</TopLevelNavItem>
-            <TopLevelNavItem href="#">Support</TopLevelNavItem>
+            {/*<TopLevelNavItem href="/">API</TopLevelNavItem>*/}
+            {/*<TopLevelNavItem href="#">Documentation</TopLevelNavItem>*/}
+            {/*<TopLevelNavItem href="#">Support</TopLevelNavItem>*/}
           </ul>
         </nav>
         <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" />
@@ -78,9 +80,9 @@ export const Header = forwardRef(function Header({ className }, ref) {
           <MobileSearch />
           <ModeToggle />
         </div>
-        <div className="hidden min-[416px]:contents">
-          <Button href="#">Sign in</Button>
-        </div>
+        {/*<div className="hidden min-[416px]:contents">*/}
+        {/*  <Button href="#">Sign in</Button>*/}
+        {/*</div>*/}
       </div>
     </motion.div>
   )

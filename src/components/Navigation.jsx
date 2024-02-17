@@ -15,18 +15,18 @@ function useInitialValue(value, condition = true) {
   return condition ? initialValue : value
 }
 
-function TopLevelNavItem({ href, children }) {
-  return (
-    <li className="md:hidden">
-      <Link
-        href={href}
-        className="block py-1 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-      >
-        {children}
-      </Link>
-    </li>
-  )
-}
+// function TopLevelNavItem({ href, children }) {
+//   return (
+//     <li className="md:hidden">
+//       <Link
+//         href={href}
+//         className="block py-1 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+//       >
+//         {children}
+//       </Link>
+//     </li>
+//   )
+// }
 
 function NavLink({ href, tag, active, isAnchorLink = false, children }) {
   return (
@@ -185,25 +185,9 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
   {
-    title: 'Guides',
+    title: 'LendeXe Whitepaper',
     links: [
-      { title: 'Introduction', href: '/' },
-      { title: 'Quickstart', href: '/quickstart' },
-      { title: 'SDKs', href: '/sdks' },
-      { title: 'Authentication', href: '/authentication' },
-      { title: 'Pagination', href: '/pagination' },
-      { title: 'Errors', href: '/errors' },
-      { title: 'Webhooks', href: '/webhooks' },
-    ],
-  },
-  {
-    title: 'Resources',
-    links: [
-      { title: 'Contacts', href: '/contacts' },
-      { title: 'Conversations', href: '/conversations' },
-      { title: 'Messages', href: '/messages' },
-      { title: 'Groups', href: '/groups' },
-      { title: 'Attachments', href: '/attachments' },
+      { title: 'LendeXe Whitepaper', href: '/' },
     ],
   },
 ]
@@ -212,9 +196,9 @@ export function Navigation(props) {
   return (
     <nav {...props}>
       <ul role="list">
-        <TopLevelNavItem href="/">API</TopLevelNavItem>
-        <TopLevelNavItem href="#">Documentation</TopLevelNavItem>
-        <TopLevelNavItem href="#">Support</TopLevelNavItem>
+        {/*<TopLevelNavItem href="/">API</TopLevelNavItem>*/}
+        {/*<TopLevelNavItem href="#">Documentation</TopLevelNavItem>*/}
+        {/*<TopLevelNavItem href="#">Support</TopLevelNavItem>*/}
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
             key={group.title}
@@ -222,11 +206,11 @@ export function Navigation(props) {
             className={groupIndex === 0 && 'md:mt-0'}
           />
         ))}
-        <li className="sticky bottom-0 z-10 mt-6 min-[416px]:hidden">
-          <Button href="#" variant="filled" className="w-full">
-            Sign in
-          </Button>
-        </li>
+        {/*<li className="sticky bottom-0 z-10 mt-6 min-[416px]:hidden">*/}
+        {/*  <Button href="#" variant="filled" className="w-full">*/}
+        {/*    Sign in*/}
+        {/*  </Button>*/}
+        {/*</li>*/}
       </ul>
     </nav>
   )
